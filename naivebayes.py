@@ -1,12 +1,15 @@
 # Performs Naive Bayes on the data set.
 
-from data import train_features, train_targets, validation_features, \
-    validation_targets, print_accuracy
+from data import *
 from sklearn.naive_bayes import GaussianNB
 
 print("Running Naive Bayes...")
 gnb = GaussianNB()
-validation_predictions = \
-    gnb.fit(train_features, train_targets).predict(validation_features)
+gnb.fit(train_features, train_targets)
+validation_predictions = gnb.predict(validation_features)
 
 print_accuracy(validation_predictions, validation_targets)
+
+test_predictions = gnb.predict(test_features)
+
+write_submission(test_data['id'], test_predictions, 'naivebayes.csv')
