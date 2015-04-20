@@ -23,3 +23,13 @@ validation_features = kaggle_train_features[split_index:]
 train_targets = kaggle_train_targets[:split_index]
 validation_targets = kaggle_train_targets[split_index:]
 
+def print_accuracy(predictions, targets):
+    total = len(predictions)
+    if total != len(targets):
+        print "Error: Prediction and target dimensions don't match."
+        return
+    num_correct = (predictions == targets).sum()
+    percent_correct = (float(num_correct) / total) * 100
+    print("Got {0}% accuracy with {1} correct predictions out of {2}."
+            .format(percent_correct, num_correct, total))
+
