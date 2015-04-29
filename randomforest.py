@@ -1,4 +1,4 @@
-# Performs Naive Bayes on the data set.
+# Performs Random Forest on the data set.
 
 from data import *
 from sklearn import cross_validation

@@ -1,4 +1,4 @@
-# Performs Naive Bayes on the data set.
+# Performs Nearest Neighbors on the data set.
 
 from data import *
 from sklearn import cross_validation
