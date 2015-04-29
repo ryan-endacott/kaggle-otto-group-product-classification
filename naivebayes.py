@@ -6,6 +6,7 @@ from sklearn.naive_bayes import GaussianNB
 
 print("Running Naive Bayes...")
 
+print("Performing 10-fold cross validation...")
 gnb = GaussianNB()
 scores = cross_validation.cross_val_score(gnb, train_features, train_targets,
     cv = 10, scoring='log_loss')
