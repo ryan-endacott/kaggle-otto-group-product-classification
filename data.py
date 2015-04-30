@@ -4,6 +4,10 @@ import pandas as pd
 import numpy as np
 import scipy as sp
 
+# For reproducibility, although I'm not sure if it's needed for any of the
+# scikit learn algorithms or if it even affects them.
+np.random.seed(1337)
+
 train_data = pd.read_csv('train.csv')
 
 test_data = pd.read_csv('test.csv')
