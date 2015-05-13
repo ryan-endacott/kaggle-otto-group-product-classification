@@ -5,9 +5,10 @@
 # For submitting my code in the project report.
 
 for filename in *.py; do
+  echo "------------------------------------------"
   echo "# $filename"
-  file_contents=$(<$filename)
-  echo $file_contents
+  cat $filename
+  echo -e $file_contents
   echo ""
   echo ""
 done
